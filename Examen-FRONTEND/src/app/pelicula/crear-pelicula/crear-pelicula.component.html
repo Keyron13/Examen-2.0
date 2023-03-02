@@ -1,0 +1,23 @@
+<div class="shadow-lg p-3 mb-5 mt-5 rounded" style="margin-left: 25%; margin-right: 25%; position: absolute; z-index: 200; top:13%; left: 0; right: 0;background-color:rgba(255, 255, 255, 0.447);">
+    <form [formGroup]="crearPelicula" (ngSubmit)="ingresoPelicula(crearPelicula.value)" class="was-validated">
+        <div class="form-row" style="padding: 5px">
+            <input formControlName="nombre" type="text" class="form-control is-valid " placeholder="Nombre" required>
+            <div class="invalid-feedback ">Ingrese el nombre de la pelicula</div>
+        </div>
+        <div class="form-row" style="padding: 5px ">
+            <input formControlName="tipo" type="text" class="form-control is-valid " placeholder="tipo" required>
+            <div class="invalid-feedback">Ingrese una cantidad</div>
+        </div>
+        <div class="form-row" style="padding: 5px ">
+            <input formControlName="imagen" type="file" class="form-control is-valid " placeholder="imagen" required (change)="onFileSelected($event)">
+            <div class="invalid-feedback">Ingrese una imagen</div>
+        </div>
+        <div class="form-row" style="padding: 5px ">
+            <input formControlName="url" type="text" class="form-control" aria-label="file example" placeholder="url" required>
+            <div class="invalid-feedback">Ingrese una URL del video</div>
+        </div>
+        <div style="padding: 5px; display: flex; align-items:center; justify-content: center;">
+            <button type="submit" class="btn btn-outline-success">Registrar</button>
+        </div>
+    </form>
+</div>
